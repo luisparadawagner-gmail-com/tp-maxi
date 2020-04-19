@@ -1,0 +1,24 @@
+<h1>Persona</h1>
+
+<form [formGroup]="personaForm" (ngSubmit)="guardarPersona()">
+    <label>Nombre
+        <input type="text" formControlName="nombre">
+    </label>
+    <label>Apellido
+        <input type="text" formControlName="apellido">
+    </label>
+    <label>Edad
+        <input type="number" formControlName="edad">
+    </label>
+    <label>DNI
+        <input type="number" formControlName="dni">
+    </label>
+    <label>Lugar de Nacimiento
+        <input type="text" formControlName="lugardenacimiento">
+    </label>
+
+
+    <button type="submit" >Guardar</button>
+
+
+</form> 

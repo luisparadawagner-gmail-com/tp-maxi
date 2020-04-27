@@ -35,10 +35,12 @@ export class ProfesorComponent {
 			nombre: '',
 			apellido: '',
 			edad: '',
+			materia: '',
 			direccion: {
 				calle: '',
 				numero: ''
-			}
+			},
+			telefonos: this.telefonos.value
         });
 
         this.profesorForm.patchValue({edad: 60});

@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "tp-maxi"
+  "defaultProject": "tp-maxi",
+  "cli": {
+    "analytics": false
+  }
 }

@@ -1,0 +1,44 @@
+<h1>Profesor</h1>
+
+
+<form [formGroup]='profesorForm' (ngSubmit)=submit()>
+    <label>Nombre
+        <input type="text" formControlName="nombre">
+    </label>
+    <label>Apellido
+        <input type="text" formControlName="apellido">
+    </label>
+    <label>Edad
+        <input type="text" formControlName="edad">
+    </label>
+    <label>Materia
+        <input type="text" formControlName="materia">
+    </label>
+    <div formGroupName="direccion">
+        <h3>Direccion</h3>
+        <label>Calle
+            <input type="text" formControlName="calle">
+        </label>
+        <label>Número
+            <input type="text" formControlName="numero">
+        </label>
+    </div>
+    <div formArrayName= "telefonos">
+        <h3>Teléfonos</h3>
+        <button (click)="agregarTelefono()">Agregar Teléfono</button>
+        
+        <div *ngFor="let telefono of telefonos.controls; let i = index">
+            <label>
+                Teléfono <input type="text" [formControlName]="i">
+            </label>
+
+        </div>
+    </div>
+
+
+
+
+Status Formularios: {{profesorForm.status}}
+
+    <button type="submit">Guardar</button>
+</form> 
